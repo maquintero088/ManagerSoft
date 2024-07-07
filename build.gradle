@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+
+    group = 'com.qcmarcel'
+repositories {
+    mavenCentral()
+    flatDir {
+       dirs("libs", "Copylibs", "hibernate4-support",
+       "javaee-endorsed-api-6.0", "jpa2-persistence", "jsf20", "jstl",
+       "spring-framework400", "struts")
+    }
+}
+
+dependencies {
+    providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:10.0.0'
+    implementation 'mysql:mysql-connector-java:5.1.30'
+    testImplementation     'junit:junit:4.13'
+}

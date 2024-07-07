@@ -1,0 +1,12 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="com.qcmarcel.ManagerSoft.View.Modify"%>
+<%@ page pageEncoding="UTF-8" %>
+<% if(request.getParameter("page")==null){%>  
+    <%=new Modify().init(2) %>
+<%}else if(request.getParameter("page").equals("search")){%>  
+    <%=new Modify().search("actividad",request.getParameter("select_kind_activity"),2) %>
+<%}else if(request.getParameter("page").equals("edit")){%>  
+    <%=new Modify().edit(request.getParameter("input_activity_chosen"),2) %> 
+<%}else if(request.getParameter("page").equals("event")){%>  
+    <%=new Modify().event(request.getParameterValues("input_activity_values"),2) %>  
+<%}%>

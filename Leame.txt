@@ -2,8 +2,8 @@ ManagerSoft Beta
 -------------------------------------------------------
 
 
-Descripción: Herramienta Web Java que permite gestionar
-programación de un grupo musical. agendas y actividades.
+DescripciÃ³n: Herramienta Web Java que permite gestionar
+programaciÃ³n de un grupo musical. agendas y actividades.
 
 
 Servidor de aplicaciones: apache tomcat 8.0.15
@@ -13,7 +13,7 @@ Link: http://localhost:8080/ManagerSoft/
 
 -------------------------------------------------------
 
-Auto calificación:
+Auto calificaciÃ³n:
 
 1. JPA: 				1
 2. EJB 3.0:				1

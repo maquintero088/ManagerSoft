@@ -1,0 +1,8 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="com.qcmarcel.ManagerSoft.View.ScheduleImpl"%>
+<%@ page pageEncoding="UTF-8" %>
+<% if(request.getParameter("page")==null){%>  
+    <%=new ScheduleImpl().init(3) %>
+<%}else if(request.getParameter("page").equals("search")){%>  
+    <%=new ScheduleImpl().search(request.getParameterValues("input_schedule_values"),3) %> 
+<%}%> 
