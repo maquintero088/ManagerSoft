@@ -1,0 +1,12 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="View.Delete"%>
+<%@ page pageEncoding="UTF-8" %>
+<% if(request.getParameter("page")==null){%>  
+    <%=new Delete().init(2) %>
+<%}else if(request.getParameter("page").equals("search")){%>  
+    <%=new Delete().search("actividad",request.getParameter("select_kind_activity"),2) %>
+<%}else if(request.getParameter("page").equals("confirm")){%>  
+    <%=new Delete().confirm(request.getParameter("input_activity_chosen"),2) %>
+<%}else if(request.getParameter("page").equals("event")){%>  
+    <%=new Delete().event(request.getParameter("input_activity_chosen"),2) %> 
+<%}%>

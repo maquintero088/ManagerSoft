@@ -1,0 +1,8 @@
+Parametros de Conexión a Base de Datos:
+
+RDBMS: MySQL (XAMPP)
+Database: managersoftdata
+user: root
+password: (sin contraseña)
+port: 3306
+host: localhost

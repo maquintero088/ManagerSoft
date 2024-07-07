@@ -1,0 +1,10 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="View.Search"%>
+<%@ page pageEncoding="UTF-8" %>
+<% if(request.getParameter("page")==null){%>  
+    <%=new Search().init(2) %>
+<%}else if(request.getParameter("page").equals("search")){%>  
+    <%=new Search().search(request.getParameterValues("input_activity_columns"),request.getParameterValues("input_activity_values"),2) %>
+<%}else if(request.getParameter("page").equals("event")){%>  
+    <%=new Search().event(request.getParameter("input_activity_chosen"),2) %> 
+<%}%> 

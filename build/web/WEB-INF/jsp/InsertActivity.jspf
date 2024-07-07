@@ -1,0 +1,10 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="View.Insert"%>
+<%@ page pageEncoding="UTF-8" %>
+<% if(request.getParameter("page")==null){%>  
+    <%=new Insert().init(2) %>
+<%}else if(request.getParameter("page").equals("validate")){%>  
+    <%=new Insert().validate(request.getParameter("input_datetime_activity"),2) %> 
+<%}else if(request.getParameter("page").equals("event")){%>  
+    <%=new Insert().event(request.getParameterValues("input_activity_values"),2) %> 
+<%}%>
